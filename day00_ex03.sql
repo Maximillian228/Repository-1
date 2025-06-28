@@ -1,2 +1,5 @@
-SELECT concat (name,'(age:'age,',gender:"', gender,'", adress:"',adress,'")') FROM person 
-ORDER BY concat (name,'(age:'age,',gender:"',gender,'",adress:"',adress,'")')
+SELECT DISTINCT person_id
+FROM visits
+WHERE (visit_date BETWEEN DATE '2022-01-06' AND DATE '2022-01-09')
+   OR pizzeria_id = 2
+ORDER BY person_id DESC;
